@@ -1,0 +1,133 @@
+<div class="col-sm-12">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 mb-3">
+      <div class="row">
+        <div class="col-md-12 p-0">
+          <div class="w-100">
+            <div class="wrapper dynamic-tabs-container">
+              <div class="scroller scroller-left">
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <div class="scroller scroller-right">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+              <nav
+                class="nav nav-tabs list dynamic-tabs"
+                id="myTab"
+                role="tablist"
+              >
+                <a
+                  class="nav-item nav-link active"
+                  data-toggle="tab"
+                  href="#tab1"
+                  role="tab"
+                  aria-controls="public"
+                  aria-expanded="true"
+                  ><i class="fas fa-user mr-1"></i>
+                  <span class="tab-txt">user dashboard</span></a
+                >
+                <a
+                  class="nav-item nav-link"
+                  href="#tab2"
+                  role="tab"
+                  data-toggle="tab"
+                  ><i class="fas fa-file-contract mr-1"></i>
+                  <span class="tab-txt">Projects</span></a
+                >
+                <a
+                  class="nav-item nav-link"
+                  href="#tab3"
+                  role="tab"
+                  data-toggle="tab"
+                  ><i class="fas fa-cog mr-1"></i>
+                  <span class="tab-txt">responsibilities</span></a
+                >
+                <a
+                  class="nav-item nav-link"
+                  href="#tab4"
+                  role="tab"
+                  data-toggle="tab"
+                  ><i class="fas fa-briefcase mr-1"></i>
+                  <span class="tab-txt">roles</span></a
+                >
+                <a
+                  class="nav-item nav-link"
+                  href="#tab5"
+                  role="tab"
+                  data-toggle="tab"
+                  ><i class="fab fa-hubspot mr-1"></i>
+                  <span class="tab-txt">relations</span></a
+                >
+                <a
+                  class="nav-item nav-link"
+                  href="#tab6"
+                  role="tab"
+                  data-toggle="tab"
+                  ><i class="fas fa-th-large mr-1"></i
+                  ><span class="tab-txt">SUBORDINATES</span></a
+                >
+              </nav>
+            </div>
+            <div class="tab-content" id="myTabContent">
+              <div
+                role="tabpanel"
+                class="tab-pane fade active show mt-2"
+                id="tab1"
+                aria-labelledby="public-tab"
+                aria-expanded="true"
+              >
+                <app-tab1></app-tab1>
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab2"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+                aria-expanded="false"
+              >
+                <app-tab2></app-tab2>
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab3"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+                aria-expanded="false"
+              >
+                <app-tab3></app-tab3>
+              </div>
+
+              <div
+                class="tab-pane fade mt-2"
+                id="tab4"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+                aria-expanded="false"
+              >
+                <app-tab4></app-tab4>
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab5"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+                aria-expanded="false"
+              >
+                <app-tab5></app-tab5>
+              </div>
+              <div
+                class="tab-pane fade mt-2"
+                id="tab6"
+                role="tabpanel"
+                aria-labelledby="group-dropdown2-tab"
+                aria-expanded="false"
+              >
+                <app-subordinates></app-subordinates>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

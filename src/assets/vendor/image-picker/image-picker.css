@@ -1,0 +1,54 @@
+/* line 6, source/sass/image-picker.scss */
+ul.thumbnails.image_picker_selector {
+    overflow: auto;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    height: 138px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+    /* line 15, source/sass/image-picker.scss */
+    ul.thumbnails.image_picker_selector ul {
+        overflow: auto;
+        list-style-image: none;
+        list-style-position: outside;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    /* line 25, source/sass/image-picker.scss */
+    ul.thumbnails.image_picker_selector li.group_title {
+        float: none;
+    }
+    /* line 30, source/sass/image-picker.scss */
+    ul.thumbnails.image_picker_selector li {
+        margin: 0px 7px 0px 0px;
+        width: 70px;
+        height: 70px;
+        float: left;
+        cursor: pointer;
+    }
+        /* line 35, source/sass/image-picker.scss */
+        ul.thumbnails.image_picker_selector li .thumbnail {
+            padding: 6px;
+            border: 1px solid #DDD;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #9fa5b5;
+        }
+            /* line 42, source/sass/image-picker.scss */
+            ul.thumbnails.image_picker_selector li .thumbnail img {
+                width: 90%;
+                margin: 0 auto;
+                -webkit-user-drag: none;
+            }
+            /* line 48, source/sass/image-picker.scss */
+            ul.thumbnails.image_picker_selector li .thumbnail.selected {
+                background: #3880A8;
+            }

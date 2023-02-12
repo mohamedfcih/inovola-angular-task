@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Metrix Plus</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="assets/vendor/fontawesome-free-5.9.0-web/css/all.min.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--demorse-->
+    <link href="assets/vendor/dsmorse/css/dsmorsecss.css" rel="stylesheet" />
+    <link href="assets/vendor/dsmorse/css/jquery.gridster.min.css" rel="stylesheet" />
+    <!--Scroll-->
+    <link href="assets/vendor/OverlayScrollbars-master/css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <!-- Select2 styles -->
+    <link href="assets/css/select2.min.css" rel="stylesheet" />
+    <!--multi select-->
+    <link href="assets/vendor/multi select/fm.selectator.jquery.css" rel="stylesheet" />
+    <!--Gantt Chart-->
+    <link href="assets/vendor/gantt-chart/frappe-gantt.css" rel="stylesheet" />
+    <!-- dragtable -->
+    <link href="assets/vendor/dragtable/css/akottr.css" rel="stylesheet" />
+    <link href="assets/vendor/dragtable/css/dragtable.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- components styles -->
+    <link href="assets/css/components/menu.css" rel="stylesheet" />
+    <base href="/">
+
+</head>
+
+<body>
+  <app-root></app-root>
+
+   
+      <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/vendor/jquery/1.9.1jquery.min.js"></script>
+    <script src="assets/vendor/jquery/jquery-ui.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Select2 searchable JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <!--Color Picker-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-color/dist/vue-color.min.js"></script>
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/sankey.js"></script>
+    <script src="https://code.highcharts.com/modules/organization.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!--demorse-->
+    <script src="assets/vendor/dsmorse/js/jquery.gridster.min.js"></script>
+    <!--Scroll-->
+    <script src="assets/vendor/OverlayScrollbars-master/js/OverlayScrollbars.min.js"></script>
+
+    <!--Multi select-->
+    <script src="assets/vendor/multi select/fm.selectator.jquery.js"></script>
+
+    <!-- dragtable -->
+    <script src="assets/vendor/dragtable/js/jquery.dragtable.js"></script>
+
+    <!--Gantt Chart-->
+    <script src="assets/vendor/gantt-chart/frappe-gantt.js"></script>
+    <script src="assets/vendor/gantt-chart/demo.project-gantt.js"></script>
+    <!--Main Script File-->
+    <script src="assets/js/scripts.js"></script>
+
+    <!-- dragtable -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.dragtable').dragtable({ dragHandle: '.some-handle' });
+
+            $('.dragtable').dragtable({ dragaccept: '.accept' });
+        });
+    </script>
+
+
+    <script>
+
+        $(document).on("click", ".roles", function () {
+            $('#tabsPersonas').modal({
+                backdrop: 'static',
+                keyboard: false
+            })
+        });
+
+
+        $(document).on("click", ".manage-st-card-btn", function () {
+            $(this).closest('.single-st-container').children('.single-st-card').addClass("active-st-card");
+
+            $('#manageStCardModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            })
+        });
+
+
+
+        $(".add-card-btn").click(
+            function () {
+                var newStCard = "<div class='w-25 float-left single-st-container'><div class='card single-st-card newStCard' data-title='default'><div class='main-card-actions d-flex'><div class='dropdown d-inline-block single-card-actions'><span class='actions-ddl' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><i class='fas fa-ellipsis-h'></i></span><div class='dropdown-menu' aria-labelledby='dropdownMenuButton'><a class='dropdown-item manage-st-card-btn'>Card settings</a><div class='dropdown-divider'></div><a class='dropdown-item text-danger delete-button'>Delete card</a></div></div></div><div class='p-2'><h6>Object name</h6><h1 class='counter' data-count='0'>0</h1><p><span class='badge badge-gray mr-1 border-4px'><i class='fas fa-sort-up clear-btn'></i>0%</span>For Last Week</p></div></div></div>"
+                $(newStCard).insertBefore($(this).closest(".single-st-container"));
+
+
+                setTimeout(function () {
+                    $('.newStCard').addClass('highlight');
+                }, 100);
+
+                setTimeout(function () {
+                    $('.newStCard').removeClass('highlight');
+                }, 500);
+
+                setTimeout(function () {
+                    $('.single-st-card.newStCard').removeClass('newStCard');
+                }, 500);
+
+                //$(this).closest(".all-st-cards").append("<div class='w-20 float-left single-st-container'><div class='card single-st-card default'><div class='main-card-actions d-flex'><div class='dropdown d-inline-block single-card-actions'><span class='actions-ddl' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><i class='fas fa-ellipsis-h'></i></span><div class='dropdown-menu' aria-labelledby='dropdownMenuButton'><a class='dropdown-item manage-st-card-btn'>Card settings</a><div class='dropdown-divider'></div><a class='dropdown-item text-danger delete-button' href='#'>Delete card</a></div></div></div><div class='p-2'><h6>Object name</h6><h1 class='counter' data-count='0'>0</h1><p><span class='badge badge-gray mr-1 border-4px'><i class='fas fa-sort-up clear-btn'></i>0%</span>For Last Week</p></div></div></div>");
+                $(".delete-button").click(
+                    function () {
+                        $(this).closest(".single-st-container").remove();
+                    }
+                )
+            }
+        );
+
+        $(".delete-button").click(
+            function () {
+                $(this).closest(".single-st-container").remove();
+            }
+        )
+
+
+
+        $(document).on("click", "#saveStCardChanges", function () {
+            var newColor = $("#newColorCode2").val();
+            $(".active-st-card").css("background-color", newColor);
+            var ddlValue = $("#dataType").val();
+            var ddlText = $("#dataType option:selected").text();
+            var ddlnumber = $('#dataType').find(':selected').data('content');
+
+            $(".active-st-card").attr('data-title', ddlValue);
+            $(".active-st-card h6").text(ddlText);
+            $(".active-st-card h1").text(ddlnumber);
+            $(".active-st-card h1").attr('data-count', ddlnumber);
+            $('.single-st-card.active-st-card').removeClass("active-st-card");
+        });
+
+    </script>
+
+    <!--Color picker-->
+    <script>
+        var Chrome = VueColor.Chrome;
+        Vue.component('colorpicker', {
+            components: {
+                'chrome-picker': Chrome,
+            },
+            template: `<div class="input-group color-picker" ref="colorpicker">
+                                                                                                                                                                                                                      <input type="text" id="newColorCode" class="form-control flex-grow-1 border-right-0" v-model="colorValue" @focus="showPicker()" @input="updateFromInput" />
+                                                                                                                                                                                                                                    <span class="input-group-addon color-picker-container">
+                                                                                                                                                                                                                           <span class="current-color" :style="'background-color: ' + colorValue" @click="togglePicker()"></span>
+                                                                                                                                                                                                                            <chrome-picker :value="colors" @input="updateFromPicker" v-if="displayPicker" />
+                                                                                                                                                                                                                              </span>
+                                                                                                                                                                                                                         </div>`,
+            props: ['color'],
+            data() {
+                return {
+                    colors: {
+                        hex: '#000000',
+                    },
+                    colorValue: '',
+                    displayPicker: false,
+                }
+            },
+            mounted() {
+                this.setColor(this.color || '#000000');
+            },
+            methods: {
+                setColor(color) {
+                    this.updateColors(color);
+                    this.colorValue = color;
+                },
+                updateColors(color) {
+                    if (color.slice(0, 1) == '#') {
+                        this.colors = {
+                            hex: color
+                        };
+                    }
+                    else if (color.slice(0, 4) == 'rgba') {
+                        var rgba = color.replace(/^rgba?\(|\s+|\)$/g, '').split(','),
+                            hex = '#' + ((1 << 24) + (parseInt(rgba[0]) << 16) + (parseInt(rgba[1]) << 8) + parseInt(rgba[2])).toString(16).slice(1);
+                        this.colors = {
+                            hex: hex,
+                            a: rgba[3],
+                        }
+                    }
+                },
+                showPicker() {
+                    document.addEventListener('click', this.documentClick);
+                    this.displayPicker = true;
+                },
+                hidePicker() {
+                    document.removeEventListener('click', this.documentClick);
+                    this.displayPicker = false;
+                },
+                togglePicker() {
+                    this.displayPicker ? this.hidePicker() : this.showPicker();
+                },
+                updateFromInput() {
+                    this.updateColors(this.colorValue);
+                },
+                updateFromPicker(color) {
+                    this.colors = color;
+                    if (color.rgba.a == 1) {
+                        this.colorValue = color.hex;
+                    }
+                    else {
+                        this.colorValue = 'rgba(' + color.rgba.r + ', ' + color.rgba.g + ', ' + color.rgba.b + ', ' + color.rgba.a + ')';
+                    }
+                },
+                documentClick(e) {
+                    var el = this.$refs.colorpicker,
+                        target = e.target;
+                    if (el !== target && !el.contains(target)) {
+                        this.hidePicker()
+                    }
+                }
+            },
+            watch: {
+                colorValue(val) {
+                    if (val) {
+                        this.updateColors(val);
+                        this.$emit('input', val);
+                        //document.body.style.background = val;
+                    }
+                }
+            },
+        });
+
+
+
+
+        Vue.component('colorpicker2', {
+            components: {
+                'chrome-picker': Chrome,
+            },
+            template: `<div class="input-group color-picker" ref="colorpicker2">
+                                                                                                                                                                                                                      <input type="text" id="newColorCode2" class="form-control flex-grow-1 border-right-0" v-model="colorValue" @focus="showPicker()" @input="updateFromInput" />
+                                                                                                                                                                                                                                    <span class="input-group-addon color-picker-container">
+                                                                                                                                                                                                                           <span class="current-color" :style="'background-color: ' + colorValue" @click="togglePicker()"></span>
+                                                                                                                                                                                                                            <chrome-picker :value="colors" @input="updateFromPicker" v-if="displayPicker" />
+                                                                                                                                                                                                                              </span>
+                                                                                                                                                                                                                         </div>`,
+            props: ['color'],
+            data() {
+                return {
+                    colors: {
+                        hex: '#000000',
+                    },
+                    colorValue: '',
+                    displayPicker: false,
+                }
+            },
+            mounted() {
+                this.setColor(this.color || '#000000');
+            },
+            methods: {
+                setColor(color) {
+                    this.updateColors(color);
+                    this.colorValue = color;
+                },
+                updateColors(color) {
+                    if (color.slice(0, 1) == '#') {
+                        this.colors = {
+                            hex: color
+                        };
+                    }
+                    else if (color.slice(0, 4) == 'rgba') {
+                        var rgba = color.replace(/^rgba?\(|\s+|\)$/g, '').split(','),
+                            hex = '#' + ((1 << 24) + (parseInt(rgba[0]) << 16) + (parseInt(rgba[1]) << 8) + parseInt(rgba[2])).toString(16).slice(1);
+                        this.colors = {
+                            hex: hex,
+                            a: rgba[3],
+                        }
+                    }
+                },
+                showPicker() {
+                    document.addEventListener('click', this.documentClick);
+                    this.displayPicker = true;
+                },
+                hidePicker() {
+                    document.removeEventListener('click', this.documentClick);
+                    this.displayPicker = false;
+                },
+                togglePicker() {
+                    this.displayPicker ? this.hidePicker() : this.showPicker();
+                },
+                updateFromInput() {
+                    this.updateColors(this.colorValue);
+                },
+                updateFromPicker(color) {
+                    this.colors = color;
+                    if (color.rgba.a == 1) {
+                        this.colorValue = color.hex;
+                    }
+                    else {
+                        this.colorValue = 'rgba(' + color.rgba.r + ', ' + color.rgba.g + ', ' + color.rgba.b + ', ' + color.rgba.a + ')';
+                    }
+                },
+                documentClick(e) {
+                    var el = this.$refs.colorpicker,
+                        target = e.target;
+                    if (el !== target && !el.contains(target)) {
+                        this.hidePicker()
+                    }
+                }
+            },
+            watch: {
+                colorValue(val) {
+                    if (val) {
+                        this.updateColors(val);
+                        this.$emit('input', val);
+                        //document.body.style.background = val;
+                    }
+                }
+            },
+        });
+        new Vue({
+            el: '#app',
+            data: {
+                defaultColor: '#FFFFFF'
+            }
+        });
+        new Vue({
+            el: '#app2',
+            data: {
+                defaultColor: '#FFFFFF'
+            }
+        });
+    </script>
+
+    <!--Dynamic Tabs-->
+    <script>
+        var tabID = 7;
+
+        $(document).ready(function () {
+            $('#btn-add-tab').click(function () {
+                tabID++;
+                $('#myTab').append($('<a class="nav-item nav-link" href="#tab' + tabID + '" role="tab" data-toggle="tab"><span class="tab-txt">Tab title</span><i title="Edit title" class="action fas fa-pen edit"></i> <i title="Personas" class="action fas fa-users-cog roles"></i> <i title="Remove" class="action fas fa-times close"></i></a>'));
+                $('#myTabContent').append($('<div class="tab-pane fade mt-2" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false" id="tab' + tabID + '"><div class="gridster custom-style m-h-0px"> <ul></ul></div><div class="add-card-gridster addNewBox"><img src="assets/images/add-widget.svg"><h6>Add New Card</h6></div></div>'));
+                var LastFirst = $('#myTab a:last-child');
+                LastFirst.tab('show');
+
+                var totalWidth = 0;
+                $('.dynamic-tabs a').each(function () {
+                    totalWidth += $(this).outerWidth(true);
+                });
+
+
+                if (totalWidth > ($('.dynamic-tabs-container').width())) {
+                    $('.scroller-right').fadeIn();
+                    $('.scroller-left').fadeOut();
+
+                    $('.list').animate({ left: "+=" + widthOfHidden() + "px" }, 'slow', function () {
+                        $('.scroller-left').fadeIn('slow');
+                        $('.scroller-right').fadeOut('slow');
+                    });
+                    //alert("width more");
+                }
+                else {
+                    //alert("width less"+"======" + totalWidth +"========="+ $('.dynamic-tabs-container').width());
+                    $('.scroller-right').fadeOut();
+                    $('.scroller-left').fadeOut();
+                }
+
+                reAdjust();
+
+                $(".edit").click(editHandler);
+                reAdjust();
+            });
+
+            $('#myTab').on('click', '.close', function () {
+                var tabID = $(this).parents('a').attr('href');
+                $(this).parents('a').remove();
+                $(tabID).remove();
+
+
+
+                $('.list').animate({ left: "-=" + getLeftPosi() + "px" }, 'slow', function () {
+
+
+                    var totalWidth = 0;
+                    $('.dynamic-tabs a').each(function () {
+                        totalWidth += $(this).outerWidth(true);
+                    });
+
+
+                    if (totalWidth > ($('.dynamic-tabs-container').width())) {
+                        $('.scroller-right').fadeIn();
+                        $('.scroller-left').fadeOut();
+                        //alert("width more");
+                    }
+                    else {
+                        //alert("width less"+"======" + totalWidth +"========="+ $('.dynamic-tabs-container').width());
+                        $('.scroller-right').fadeOut();
+                        $('.scroller-left').fadeOut();
+                    }
+
+                });
+
+                //display first tab
+                var tabFirst = $('#myTab a:first-child');
+                tabFirst.tab('show');
+                reAdjust();
+
+            });
+
+            var list = document.getElementById("myTab");
+        });
+
+        var editHandler = function () {
+            var t = $(this);
+            $('.tab-txt').removeAttr("contenteditable");
+
+            $(this).parent('a').children('.tab-txt').attr("contenteditable", "true").focus();
+            $(this).parent('a').children('.tab-txt').attr("contenteditable", "true").focusout(function () {
+                reAdjust();
+                $(this).removeAttr("contenteditable").off("focusout");
+                t.css("visibility", "visible");
+            });
+        };
+        $(".edit").click(editHandler);
+    </script>
+
+    <!--Dynamic Tabs-->
+    <script>
+        var hidWidth;
+        var scrollBarWidths = 40;
+
+        var widthOfList = function () {
+            var itemsWidth = 0;
+            $('.list a').each(function () {
+                var itemWidth = $(this).outerWidth();
+                itemsWidth += itemWidth;
+            });
+            return itemsWidth;
+        };
+
+        var widthOfHidden = function () {
+            return (($('.wrapper').outerWidth()) - widthOfList() - getLeftPosi()) - scrollBarWidths;
+        };
+
+        var getLeftPosi = function () {
+            return $('.list').position().left;
+        };
+
+        var reAdjust = function () {
+            if (($('.wrapper').outerWidth()) < widthOfList()) {
+                $('.scroller-right').show().css('display', 'flex');
+            }
+            else {
+                $('.scroller-right').hide();
+            }
+
+            if (getLeftPosi() < 0) {
+                $('.scroller-left').show().css('display', 'flex');
+            }
+            else {
+                $('.item').animate({ left: "-=" + getLeftPosi() + "px" }, 'slow');
+                $('.scroller-left').hide();
+            }
+        }
+
+        reAdjust();
+
+        $(window).on('resize', function (e) {
+            reAdjust();
+        });
+
+        $('.scroller-right').click(function () {
+
+            $('.scroller-left').fadeIn('slow');
+            $('.scroller-right').fadeOut('slow');
+
+            $('.list').animate({ left: "+=" + widthOfHidden() + "px" }, 'slow', function () {
+
+            });
+        });
+
+        $('.scroller-left').click(function () {
+
+            $('.scroller-right').fadeIn('slow');
+            $('.scroller-left').fadeOut('slow');
+
+            $('.list').animate({ left: "-=" + getLeftPosi() + "px" }, 'slow', function () {
+
+            });
+        });
+    </script>
+
+
+    <!--demorse-->
+    <script type="text/javascript">
+        $(function () {
+            var gridster;
+            var grid_size = 100;
+            var grid_margin = 10;
+            //gridster = $(".gridster ul").gridster({
+            //    widget_base_dimensions: ['auto', 140],
+            //    autogenerate_stylesheet: true,
+            //    min_cols: 1,
+            //    max_cols: 6,
+            //    widget_margins: [5, 5],
+            //    draggable: {
+            //        handle: 'header i'
+            //    },
+            //    resize: {
+            //        enabled: true
+            //    }
+            //}).data('gridster');
+
+
+
+            $(document).on("click", ".manage-card-btn", function () {
+                $(this).closest('li').addClass("active-canvas-card");
+                var cardTitle = $(this).closest('li').children('.card-header').children('.card-title-container').children('.card-title').text();
+                $("#cardTitleInput").val(cardTitle);
+
+                $('#manageCardModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                })
+            });
+
+            $(document).on("click", "#saveCardChanges", function () {
+                $(".active-canvas-card .card-header .card-title").text($(".selectator_selected_item_title").text());
+                var newColor = $("#newColorCode").val();
+                $(".active-canvas-card").css("background-color", newColor);
+                var imgSrc = $(".selectator_selected_item_left").children("img").attr('src');
+                $(".active-canvas-card .card-header .card-title-icon img").attr("src", imgSrc);
+                $('li.active-canvas-card').removeClass("active-canvas-card");
+            });
+
+
+            $('#ShowHideTitle').click(function () {
+                if ($(this).prop("checked") == true) {
+                    $('.active-canvas-card .card-header').removeClass("d-none");
+                }
+                else if ($(this).prop("checked") == false) {
+                    $('.active-canvas-card .card-header').addClass("d-none");
+                }
+            });
+
+
+            $("#closeBtn").click(function () {
+                $('li.active-canvas-card').removeClass("active-canvas-card");
+            });
+
+
+            $(document).on("click", ".addNewBox", function () {
+                var thisGridster = $(this).closest('.tab-pane').children('.gridster').children('ul');
+
+                Newgridster = thisGridster.gridster({
+                    widget_base_dimensions: ['auto', 140],
+                    autogenerate_stylesheet: true,
+                    min_cols: 1,
+                    max_cols: 6,
+                    widget_margins: [5, 5],
+                    draggable: {
+                        handle: 'header i'
+                    },
+                    resize: {
+                        enabled: true
+                    }
+                }).data('gridster');
+
+                Newgridster
+                    .add_widget("<li> <div class='main-card-actions d-flex'><div><header class='handler'><i class='fas fa-arrows-alt'></i></header></div><div class='dropdown d-inline-block single-card-actions'><span class='actions-ddl' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><i class='fas fa-ellipsis-h'></i></span><div class='dropdown-menu' aria-labelledby='dropdownMenuButton'><a class='dropdown-item manage-card-btn'>Card settings</a><div class='dropdown-divider'></div><a class='dropdown-item text-danger delete-button'>Delete card</a></div></div></div><div class='card-header d-flex'><div class='card-title-icon mr-2'><img src='assets/images/archimate icons/application-process-blue-transperant.svg'></div><div class='card-title-container'><h4 class='card-title'>Card title</h4></div></div><div class='card-body p-2'></div></li>", 6, 2);
+                Newgridster.resizable({
+                    grid: [grid_size + (grid_margin * 2), grid_size + (grid_margin * 2)],
+                    animate: false,
+                    minWidth: grid_size,
+                    minHeight: grid_size,
+                    containment: '#layouts_grid ul',
+                    autoHide: true,
+                    stop: function (event, ui) {
+                        var resized = $(this);
+                        setTimeout(function () {
+                            resizeBlock(resized);
+                        }, 300);
+                    }
+                });
+
+                $(document).on("click", ".delete-button", function () {
+                    var gridster = $(this).closest('.tab-pane').children('.gridster').children('ul').data('gridster');
+                    gridster.remove_widget($(this).closest("li"));
+                });
+
+            });
+        })
+    </script>
+
+    <!--select with icon-->
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
+    <!--select with icon-->
+    <script>
+        $('#basic').selectator({
+            labels: {
+                search: 'Search here...'
+            },
+            searchFields: 'value text subtitle right'
+        });
+    </script>
+
+
+    <!--Tree Chart-->
+    <script>
+        Highcharts.chart('tree', {
+            chart: {
+                height: 220,
+                inverted: true
+            },
+            title: {
+                text: ''
+            },
+            series: [{
+                type: 'organization',
+                name: '',
+                keys: ['from', 'to'],
+                data: [
+
+                    ['Organization', 'Department1'],
+                    ['Organization', 'Department2'],
+                    ['Department1', 'Section1'],
+                    ['Department1', 'Section2'],
+                    ['Department2', 'Section3'],
+                    ['Department2', 'Section4']
+                ],
+                levels: [{
+                    level: 0,
+                    color: '#EAF4F9',
+                    borderWidth: 2,
+                    borderColor: '#008BB5',
+                    dataLabels: {
+                        color: '#434343'
+                    },
+                    height: 25
+                }, {
+                    level: 1,
+                    color: '#EAF4F9',
+                    borderWidth: 2,
+                    borderColor: '#008BB5',
+                    dataLabels: {
+                        color: '#434343'
+                    },
+                    height: 25
+                }, {
+                    level: 2,
+                    color: '#EAF4F9',
+                    borderWidth: 2,
+                    borderColor: '#008BB5',
+                    dataLabels: {
+                        color: '#434343'
+                    }
+                }, {
+                    level: 4,
+                    color: '#EAF4F9',
+                    borderWidth: 2,
+                    borderColor: '#008BB5',
+                    dataLabels: {
+                        color: '#434343'
+                    }
+                }],
+                nodes: [{
+                    id: 'Organization',
+                    title: '',
+                    name: 'Organization',
+                    image: 'assets/images/archimate icons/outcome-purple.svg'
+
+                }, {
+                    id: 'Department1',
+                    title: '',
+                    name: 'Department1',
+                    image: 'assets/images/archimate icons/location-orange.svg',
+                    column: 1,
+
+
+                }, {
+                    id: 'Department2',
+                    title: '',
+                    name: 'Department2',
+                    image: 'assets/images/archimate icons/actor-yellow.svg',
+                    column: 1,
+
+
+                }, {
+                    id: 'Section1',
+                    column: 2,
+                    title: '',
+                    name: 'Section1',
+                    image: 'assets/images/archimate icons/function-green.svg',
+
+                }, {
+                    id: 'Section2',
+                    column: 2,
+                    title: '',
+                    name: 'Section2',
+                    image: 'assets/images/archimate icons/application-component-blue.svg',
+
+                }, {
+                    id: 'Section3',
+                    column: 2,
+                    title: '',
+                    name: 'Section3',
+                    image: 'assets/images/archimate icons/technology-process-green.svg',
+
+                }, {
+                    id: 'Section4',
+                    column: 2,
+                    title: '',
+                    name: 'Section4',
+                    image: 'assets/images/archimate icons/implementation-red.svg',
+
+                }],
+                colorByPoint: false,
+                color: '#007ad0',
+                dataLabels: {
+                    color: 'white'
+                },
+                borderColor: 'white',
+                nodeWidth: 35
+            }],
+            tooltip: {
+                outside: true
+            },
+            exporting: {
+                allowHTML: true,
+                sourceWidth: 800,
+                sourceHeight: 600
+            }
+        });
+
+    </script>
+</body>
+
+</html>
+

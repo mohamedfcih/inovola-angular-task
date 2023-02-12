@@ -1,0 +1,104 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>jQuery Calendars Datepicker</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.calendars.picker.css">
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.calendars.js"></script>
+    <script type="text/javascript" src="js/jquery.calendars.plus.js"></script>
+    <script type="text/javascript" src="js/jquery.calendars.picker.js"></script>
+    <!--script type="text/javascript" src="jquery.calendars.picker.ext.js"></script--><!-- Include for ThemeRoller styling -->
+    <script type="text/javascript" src="js/jquery.calendars.ummalqura.js	"></script>
+    <script type="text/javascript" src="js/jquery.calendars.ummalqura-ar.js	"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            //	$.calendars.picker.setDefaults({renderer: $.calendars.picker.themeRollerRenderer}); // Requires jquery.calendars.picker.ext.js
+            $('#popupDatepickerUmmAlQura').calendarsPicker({ calendar: $.calendars.instance('UmmAlQura') });
+            $('#popupDatepicker').calendarsPicker();
+            //$('#inlineDatepicker').calendarsPicker({ calendar: $.calendars.instance('UmmAlQura'), onSelect: showDate });
+            debugger;
+            // var d = $.calendars.newDate(2017, 3, 15, 'UmmAlQura', 'fa');
+            ////  var e = $.calendars.newDate(d, 'gregorian', 'fa');
+
+            // var d = $.calendars.newDate(1438, 6, 18, 'UmmAlQura', 'fa');
+            ///  console.log("UmmAlQura date: " + d.toLocaleString()); // Persian date: 1388-01-01
+            //  var e = d.toJSDate();
+            ///   console.log(e); // Sat Mar 21 2009 00:00:00 GMT+0100 (Romance Standard Time)
+
+
+            // var dd = $.calendars.newDate(16 , 3, 2017, 'gregorian', 'fa');
+            // console.log("UmmAlQura date: " + d.toLocaleString()); // Persian date: 1388-01-01
+            // var ee = dd.toJD();
+            convertDates("ummalqura");
+
+        });
+
+        function showDate(date) {
+            alert('The date chosen is ' + date);
+        }
+    </script>
+
+
+    <script>
+        function convertDates(name) {
+            debugger;
+            try {
+                var jd = (name == 'jd' ? parseFloat($('#jDate').val(), 10) :
+                    //     $.calendars.instance(name).newDate( parseInt($('#' + name + 'Year').val(), 10),parseInt($('#' + name + 'Month').val(), 10),parseInt($('#' + name + 'Day').val(), 10)).toJD());
+                    $.calendars.instance(name).newDate(parseInt(1438, 10), parseInt(6, 10), parseInt(20, 10)).toJD());
+
+            }
+            catch (e) {
+                alert(e);
+                return;
+            }
+            $('#jDate').val(jd);
+            showDate('gregorian', jd);
+        }
+        function showDate(name, jd) {
+            debugger;
+            try {
+                $('#convert *:input[id^=' + name + ']').val('');
+                var date = $.calendars.instance(name).fromJD(jd);
+                alert(date.day() + "/" + date.month() + "/" + date.formatYear())
+
+            }
+            catch (e) {
+                alert(e);
+                return null;
+            }
+        }
+
+        $("#popupDatepickerUmmAlQura").change(function () {
+            debugger
+            var Date = $('#popupDatepickerUmmAlQura').val();
+
+            alert(date);
+
+        });
+
+
+        $('#popupDatepickerUmmAlQura').change(function () {
+            alert('Changed!')
+        });
+        function Convert(Datetype) {
+            debugger
+            var datetype1 = Datetype;
+
+        }
+
+/**/</script>
+</head>
+<body>
+
+    <p>UmmAlQura</p>
+    <input type="text" onchange="Convert('UmmAlQura');" id="popupDatepickerUmmAlQura">
+    <p>gregorian</p>
+    <input type="text" id="popupDatepicker">
+
+</body>
+</html>

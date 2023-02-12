@@ -1,0 +1,227 @@
+﻿.tree-container {
+    max-height: 253px;
+    height: 253px;
+}
+
+    .tree-container .os-content {
+        padding: 0px !important;
+    }
+
+.file-list, .file-list ul {
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: 2.8em;
+}
+
+.no-l-border {
+    border-left: 0px !important;
+}
+
+.file-list, .file-list ul {
+    list-style-type: none;
+    font-size: 1em;
+    line-height: 1.8em;
+    padding-left: 18px;
+    border-left: 1px dotted #aaa;
+}
+
+    .file-list li {
+        position: relative;
+        padding-left: 25px;
+        padding-right: 16px;
+    }
+
+        .file-list li a {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            color: #384E64;
+        }
+
+            .file-list li a:before {
+                display: block;
+                content: " ";
+                width: 10px;
+                height: 1px;
+                position: absolute;
+                top: 14px;
+                left: -16px;
+            }
+
+        .file-list li:before {
+            list-style-type: none;
+            font-family: FontAwesome;
+            display: block;
+            content: '\f0f6';
+            position: absolute;
+            top: 4px;
+            left: 0px;
+            width: 20px;
+            height: 20px;
+            font-size: 1.3em;
+            color: #555;
+        }
+
+    .file-list .folder-root {
+        list-style-type: none;
+    }
+
+        .file-list .folder-root a {
+            text-decoration: none;
+        }
+
+        .file-list .folder-root:before {
+            color: #FFD04E;
+            content: "\f07b";
+        }
+
+        .file-list .folder-root.open:before {
+            content: "\f07c";
+        }
+
+li.folder-root ul {
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+}
+
+li.folder-root.closed > ul {
+    opacity: 0;
+    max-height: 0px;
+}
+
+li.folder-root.open > ul {
+    opacity: 1;
+    display: block;
+    max-height: 1000px;
+    margin-top: 10px;
+}
+
+
+
+.file-list .folder-root:before {
+    content: '';
+    background-image: url('../../images/closed-folder.svg');
+    height: 33px;
+    width: 33px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.file-list .folder-root.open:before {
+    content: '';
+    background-image: url('../../images/opend-file.svg');
+}
+
+
+.file-list li:before {
+    list-style-type: none;
+    display: block;
+    content: '';
+    background-image: url('../../images/folder-default.svg');
+    height: 28px;
+    width: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.file-list li {
+    padding-left: 15px;
+    margin-bottom: 14px;
+    margin-top: 10px;
+}
+
+.file-list, .file-list ul {
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: 2.8em;
+}
+
+
+    .file-list li ul a:before {
+        border-bottom: 1px dotted #a6adb2;
+    }
+
+    .file-list, .file-list ul {
+        border-left: 1px dotted #a6adb2;
+    }
+
+        .file-list .folder-root a {
+            padding-left: 37px;
+            margin-left: -17px;
+            padding-top: 9px;
+            display: block;
+            z-index: 999999;
+            line-height: 20px;
+            position: relative;
+        }
+
+
+        .file-list li.open::before {
+            background-image: url(../../images/folder-open.svg);
+        }
+
+        .file-list ul li.open > a {
+            color: #4B88BC;
+        }
+
+.remove-version {
+    color: #a6adb2;
+    font-size: 14px;
+    position: absolute;
+    right: 0px;
+    top: 12px;
+    cursor: pointer;
+    display: none;
+}
+
+    .remove-version:hover {
+        color: #E43131 !important
+    }
+
+.file-list li:hover > .remove-version {
+    display: block;
+}
+
+.folder-root.open a.main-folder {
+    color: #4B88BC;
+}
+
+
+.mt-13px {
+    margin-top: 13px;
+}
+
+.tooltip-inner {
+    white-space: pre-wrap;
+}
+
+
+
+.file-tree .custom-checkbox {
+    position: absolute;
+    left: -18px;
+    top: 5px;
+}
+
+
+body .has-checkbox.file-list li:before {
+    left: 4px !important;
+}
+
+body .has-checkbox.file-list .folder-root a {
+    margin-left: -10px !important;
+}
+
+
+body .has-checkbox.file-list li ul a:before {
+    border-bottom: 0px dotted #a6adb2 !important;
+}
+
+.has-checkbox.file-list, .has-checkbox.file-list ul {
+    padding-left: 22px;
+}
+
+.blue-btn {
+    color: #ffffff;
+    background-color: #FB760D;
+}

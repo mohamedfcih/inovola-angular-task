@@ -1,0 +1,28 @@
+﻿table.sar-table th.accept {
+    cursor: move;
+}
+
+.dragtable th {
+    cursor: default;
+    position: relative;
+}
+
+.some-handle {
+    cursor: move;
+}
+
+.some-handle {
+    background-image: url(../../../images/handle.svg);
+    background-repeat: no-repeat;
+    height: 14px;
+    width: 6px;
+    display: none;
+    background-size: contain;
+    position: absolute;
+    top: 19px;
+}
+
+
+th:hover .some-handle {
+    display: block;
+}

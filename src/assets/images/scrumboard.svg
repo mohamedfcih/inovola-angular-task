@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 276 180" style="enable-background:new 0 0 276 180;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#39AFD1;stroke-width:6;stroke-miterlimit:12;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#39AFD1;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:6;stroke-miterlimit:12;}
+	.st3{fill:#39AFD1;}
+</style>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect x="15" y="24" class="st0" width="66" height="24"/>
+	<rect x="15" y="96" class="st0" width="66" height="24"/>
+	<rect x="15" y="60" class="st0" width="66" height="24"/>
+	<g>
+		<g>
+			<rect id="d" x="102" y="21" class="st1" width="72" height="30"/>
+		</g>
+		<rect x="105" y="24" class="st2" width="66" height="24"/>
+	</g>
+	<g>
+		<g>
+			<rect id="c" x="102" y="93" class="st1" width="72" height="30"/>
+		</g>
+		<rect x="105" y="96" class="st2" width="66" height="24"/>
+	</g>
+	<g>
+		<g>
+			<rect id="b" x="102" y="57" class="st1" width="72" height="30"/>
+		</g>
+		<rect x="105" y="60" class="st2" width="66" height="24"/>
+	</g>
+	<g>
+		<g>
+			<rect id="a" x="102" y="129" class="st1" width="72" height="30"/>
+		</g>
+		<rect x="105" y="132" class="st2" width="66" height="24"/>
+	</g>
+	<rect x="195" y="24" class="st0" width="66" height="24"/>
+	<rect x="195" y="60" class="st0" width="66" height="24"/>
+	<polygon class="st3" points="195,44.4 260.2,21.9 262.2,27.6 197,50.1 	"/>
+	<polygon class="st3" points="197,21.9 262.2,44.4 260.2,50.1 195,27.6 	"/>
+	<polygon class="st3" points="195,80.4 260.2,57.9 262.2,63.6 197,86.1 	"/>
+	<polygon class="st3" points="197,57.9 262.2,80.4 260.2,86.1 195,63.6 	"/>
+	<path class="st3" d="M6,6v168h84V6H6z M0,0h96v180H0V0z"/>
+	<path class="st3" d="M96,174h84V6H96V174z M90,0h96v180H90V0z"/>
+	<path class="st3" d="M186,174h84V6h-84V174z M180,0h96v180h-96V0z"/>
+</g>
+</svg>

@@ -1,0 +1,386 @@
+﻿.main-canvas {
+    border: 1px solid #d2d2d2;
+}
+
+.focus-area {
+    width: 40px;
+    background-color: #1BC5BD;
+    position: relative;
+}
+
+
+    .focus-area h6 {
+        font-size: 14px;
+        font-weight: bold;
+        transform: rotate( -90deg );
+        color: #ffffff;
+        white-space: nowrap;
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+.canvas-title {
+    width: 40px;
+    background-color: #FB760D;
+    position: relative;
+    overflow: hidden;
+}
+
+
+    .canvas-title.light {
+        width: 40px;
+        background-color: #f7f7f7;
+        border-left: 4px solid #4b88bc;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 4px rgba(43, 28, 28, 0.35);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+
+
+
+    .canvas-title h6 {
+        font-size: 12px;
+        font-weight: bold;
+        transform: rotate( -90deg );
+        color: #ffffff;
+        white-space: nowrap;
+        position: absolute;
+        top: 68%;
+        left: 0px;
+        right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .canvas-title img {
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .canvas-title.light h6 {
+        color: #384E64 !important;
+    }
+
+    .canvas-title.light .toggle-icon-tree {
+        color: #384E64 !important;
+    }
+
+.canvas-row {
+    border-bottom: 1px solid #d2d2d2;
+    min-height: 150px;
+    position: relative;
+}
+
+    .canvas-row.light-row {
+        border: 1px solid #d2d2d2 !important;
+        margin-bottom: 5px;
+        border-radius: 6px;
+    }
+
+.main-canvas.no-border {
+    border: 0px !important;
+}
+
+.canvas-row:last-child {
+    border-bottom: 0px solid #d2d2d2;
+}
+
+
+.tree-accordion .card {
+    background-color: #f7f7f7 !important;
+    border: 1px dashed #c1cbd4;
+}
+
+
+
+.tree-accordion .card-link .fas {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.tree-accordion .card-link.collapsed .fas {
+    transform: rotate( -90deg );
+}
+
+.tree-accordion .card-link {
+    font-weight: bold;
+    font-size: 14px;
+    color: #384E64;
+}
+
+
+.tree-accordion .file-list, .file-list ul {
+    border-left: 1px dotted #a6adb2 !important;
+}
+
+
+    .tree-accordion .file-list li:before {
+        display: none !important;
+    }
+
+
+    .tree-accordion .file-list li a.sub-li-title:before {
+        display: block;
+        content: " ";
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        top: 14px;
+        left: -17px;
+        background-color: #a6adb2;
+    }
+
+    .tree-accordion .file-list li {
+        padding-left: 0px !important;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .tree-accordion .file-list, .tree-accordion .file-list ul {
+        line-height: 29px;
+    }
+
+
+.tree-accordion .has-checkbox.file-list, .tree-accordion .has-checkbox.file-list ul {
+    padding-left: 16px;
+}
+
+
+.tree-accordion .card.success {
+    border-left: 4px solid #21CC97 !important;
+}
+
+.tree-accordion .card.warning {
+    border-left: 4px solid #FB760D !important;
+}
+
+.tree-accordion .card.default {
+    border-left: 4px solid #4b88bc !important;
+}
+
+.tree-accordion .card.danger {
+    border-left: 4px solid #F6516F !important;
+}
+
+
+.tree-accordion .file-tree li {
+    position: relative;
+}
+
+
+.tree-accordion .card-header {
+    position: relative;
+}
+
+.tree-accordion .tree-status {
+    position: absolute;
+    right: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+.canvas-row .main-card-actions {
+    height: 22px;
+    padding: 0px 25px 3px 6px;
+    border-top-right-radius: 0px;
+}
+
+    .canvas-row .main-card-actions i.fa-ellipsis-h {
+        line-height: 19px;
+    }
+
+
+.canvas-title:hover .main-card-actions {
+    display: block !important;
+}
+
+
+.tree-accordion .card-header:hover .main-card-actions {
+    display: block !important;
+}
+
+.tree-accordion .file-tree li:hover .main-card-actions {
+    display: block !important;
+}
+
+
+
+.tree-accordion .file-list li .main-card-actions a:before {
+    display: none !important;
+}
+
+.tree-accordion .file-list li .main-card-actions a {
+    font-weight: normal !important;
+    line-height: 15px !important;
+}
+
+.canvas-row .main-card-actions {
+    border-radius: 180px !important;
+    padding: 0px 7px 3px 15px !important;
+    right: 3px !important;
+    top: 5px;
+}
+
+.tree-add-action {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #384E64;
+}
+
+
+    .tree-add-action:hover {
+        color: #384E64;
+        text-decoration: none;
+    }
+
+
+.tree-accordion .card-link h6 {
+    font-weight: bold;
+    font-size: 13px;
+    color: #384E64;
+    position: absolute;
+    top: 11px;
+    left: 30px;
+}
+
+
+.add-force-area {
+    line-height: 40px;
+}
+
+
+.canvas-container {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.tree-container {
+    transition: 0.3s;
+}
+
+
+.ms-actions {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: none;
+}
+
+    .ms-actions ul {
+        list-style: none;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+        .ms-actions ul li {
+            float: left;
+            margin-left: 10px;
+            line-height: 100%;
+        }
+
+    .ms-actions a img {
+        height: 22px;
+        transition: 0.3s;
+    }
+
+        .ms-actions a img:hover {
+            transition: 0.3s;
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+.delete-sub-li {
+    cursor: pointer;
+}
+/*.tab-txt[contenteditable=true] {
+    border: 1px solid #cfd4d6;
+}*/
+
+.tree-accordion .file-list li:hover .ms-actions {
+    display: block;
+}
+
+.tree-accordion:hover .ms-actions {
+    display: block;
+}
+
+
+.canvas-row:hover .ms-actions {
+    display: block;
+}
+
+
+.horizontal-collaps .canvas-title {
+    width: 100%;
+    padding: 10px 10px 2px 10px;
+}
+
+.horizontal-collaps.canvas-row {
+    min-height: initial !important;
+    height: 43px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.horizontal-collaps.open-collaps {
+    height: auto !important;
+}
+
+.horizontal-collaps .canvas-title h6 {
+    font-size: 13px;
+    font-weight: bold;
+    transform: rotate( 0deg ) !important;
+    color: #ffffff;
+    white-space: nowrap;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 20px;
+}
+
+.toggle-icon-tree {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.bg-card {
+    border: 1px dashed #768791;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border-radius: 6px
+}
+
+.object-scroll {
+    height: 415px;
+}
+
+
+    .object-scroll .main-canvas {
+        border: 0px !important;
+    }
+
+.projects-scroll {
+    height: 487px;
+}

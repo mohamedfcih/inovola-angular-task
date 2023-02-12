@@ -1,0 +1,54 @@
+﻿.single-color-box {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .single-color-box:hover {
+        transform: scale(1.1);
+    }
+
+    .single-color-box.active {
+        background-image: url('../../images/selected-icon.svg');
+        background-size: 32%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .single-color-box.default {
+        background-color: #4b88bc;
+    }
+    .single-color-box.orange {
+        background-color: #FB760D;
+    }
+
+    .single-color-box.red {
+        background-color: #B71E3E;
+    }
+
+    .single-color-box.yellow {
+        background-color: #f7a532;
+    }
+
+    .single-color-box.green {
+        background-color: #21CC97;
+    }
+
+    .single-color-box.turkuaz {
+        background-color: #109aa4;
+    }
+
+    .single-color-box.blue {
+        background-color: #6599FF;
+    }
+
+    .single-color-box.dark-gray {
+        background-color: #464646;
+    }
+
+    .single-color-box.light-gray {
+        background-color: #8b8b8b;
+    }

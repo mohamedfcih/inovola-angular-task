@@ -1,0 +1,200 @@
+﻿.menu-style, .menu-style:focus {
+    color: #576A7C;
+    background-color: #ffffff !important;
+}
+
+    .menu-style.active, .menu-style.active:active, .menu-style.active:focus, .menu-style.active:hover {
+        background-color: rgba(75, 136, 188, 0.18) !important;
+        color: #576A7C !important;
+    }
+
+
+
+.side-menu {
+    position: fixed;
+    left: 0px;
+    width: 60px;
+    height: 100vh;
+    z-index: 999999;
+    top: 0px;
+    background-color: #ffffff;
+}
+
+    .side-menu .main-nav {
+        margin-top: 22vh;
+    }
+
+    .side-menu .nav-item {
+        position: relative;
+    }
+
+    .side-menu .main-nav .nav-link[data-toggle].collapsed:before {
+        content: "▾";
+        float: right;
+        display: none;
+    }
+
+    .side-menu .main-nav li {
+        margin-bottom: 1em;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+        border-left: 0px !important;
+    }
+
+        .side-menu .main-nav li:hover .views-icon::before {
+            background-image: url(../../images/views-active.svg) !important;
+        }
+
+        .side-menu .main-nav li:hover .Actions-icon::before {
+            background-image: url(../../images/actions-active.svg) !important;
+        }
+
+        .side-menu .main-nav li:hover .Encyclopedias-icon::before {
+            background-image: url(../../images/encyclopedia-active.svg) !important;
+        }
+
+        .side-menu .main-nav li:hover .Administration-icon::before {
+            background-image: url(../../images/administraion-active.svg) !important;
+        }
+
+
+        .side-menu .main-nav li.active a {
+            color: #4B88BC;
+        }
+
+        .side-menu .main-nav li:hover {
+            border-right: 3px solid #4B88BC;
+            background-color: #E8F1F5;
+            border-left: 0px solid #4B88BC;
+        }
+
+        .side-menu .main-nav li.active {
+            border-right: 3px solid #4B88BC;
+            border-left: 0px solid #4B88BC;
+            background-color: #E8F1F5;
+        }
+
+
+
+    .side-menu .sub-nav {
+        list-style: none;
+        margin: 0px;
+        position: absolute;
+        z-index: -1;
+        padding: 8.4px 0px 8.4px 0px;
+        top: 0px;
+        background-color: #fbfbfb;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        left: -90px;
+        opacity: 0;
+        transition: 0.3s;
+        min-width: 180px;
+        box-shadow: 0px 0px 4px rgba(106, 150, 183, 0.16);
+        border: 1px solid #eaeced;
+    }
+
+    .side-menu .nav-item:hover .sub-nav {
+        left: 60px;
+        opacity: 1;
+    }
+
+    .side-menu .arrow-left::before {
+        content: '';
+        width: 0;
+        height: 0;
+        left: -9px;
+        top: 12px;
+        position: absolute;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid #ecf1f4;
+    }
+
+
+    .side-menu .arrow-top::before {
+        content: '';
+        width: 0;
+        height: 0;
+        left: 16px;
+        top: -1px;
+        position: absolute;
+        border-top: 8px solid #4b88bc;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+    }
+
+
+
+    .side-menu .sub-menu-side {
+        padding: 0px;
+        margin: 0px;
+    }
+
+li {
+    padding-left: 0px;
+}
+
+.side-menu .main-nav li .sub-menu-side li {
+    border-left: 0px !important;
+    padding: 5px 8px !important;
+    padding-bottom: 0.3em;
+    margin-bottom: 0px !important;
+}
+
+    .side-menu .main-nav li .sub-menu-side li a {
+        color: #576A7C;
+        text-decoration: none;
+        font-weight: bold !important;
+    }
+
+    .side-menu .main-nav li .sub-menu-side li:hover {
+        background-color: #eaeaea;
+        border-right: 0px !important;
+    }
+
+
+.side-menu .user-info {
+    padding: 0px;
+    margin: 0 auto;
+    margin-top: 4vh;
+}
+
+    .side-menu .user-info li {
+        position: relative;
+    }
+
+.side-menu .user-img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #4b88bc;
+}
+
+
+.sub-nav.arrow-top {
+    z-index: -1;
+    left: -500px !important;
+    top: 38px;
+    background-color: #fbfbfb;
+    border-radius: 7px;
+    border: 1px solid #eaeced;
+    min-width: 220px;
+    /*width: 1px;
+    height: 1px;
+    overflow: hidden;*/
+    opacity: 0;
+}
+
+
+.nav-item:hover .sub-nav.arrow-top {
+    z-index: 999999;
+    left: 5px !important;
+    top: 38px;
+    width: 220px;
+    height: auto;
+    overflow: visible;
+    opacity: 1;
+}

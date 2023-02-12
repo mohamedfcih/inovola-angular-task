@@ -1,0 +1,116 @@
+﻿#events {
+    background-color: rgba(191, 191, 191, 0.15);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+    #events > div {
+        padding-bottom: 5px;
+    }
+
+        #events > div:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    #events #clear {
+        float: right;
+    }
+
+    #events .caption {
+        float: left;
+        font-weight: bold;
+        font-size: 115%;
+        line-height: 115%;
+        padding-top: 7px;
+    }
+
+    #events ul {
+        list-style: none;
+        max-height: 100px;
+        overflow: auto;
+        margin: 0;
+    }
+
+        #events ul li {
+            padding: 7px 0;
+            border-bottom: 1px solid #dddddd;
+        }
+
+            #events ul li:last-child {
+                border-bottom: none;
+            }
+
+
+.dx-toolbar-after .dx-toolbar-text-auto-hide .dx-button .dx-button-text {
+    display: block !important;
+    color: #ffffff;
+}
+
+
+.dx-toolbar-after .dx-toolbar-text-auto-hide .dx-button .dx-icon {
+    margin-right: 6px !important;
+    float: left !important;
+    color: #ffffff;
+}
+
+
+.dx-toolbar-after .dx-button-mode-contained {
+    width: 110px !important;
+    border-radius: 180px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #39AFD1;
+    font-family: 'ProximaNova-Regular', 'Cairo-Regular';
+    border: 0px !important;
+}
+
+
+    .dx-toolbar-after .dx-button-mode-contained:hover {
+        border: 0px !important;
+        background-color: #23475D;
+    }
+
+
+.dx-toolbar-after .dx-toolbar-text-auto-hide .dx-button .dx-button-content {
+    padding: 6px 8px;
+}
+
+
+.dx-datagrid-borders > .dx-datagrid-filter-panel, .dx-datagrid-borders > .dx-datagrid-headers, .dx-datagrid-borders > .dx-datagrid-pager {
+    border-top: 0px solid #ddd;
+    background-color: #ECF1F4;
+}
+
+.dx-datagrid-headers .dx-datagrid-table .dx-row > td {
+    border-bottom: 0px solid #ddd;
+}
+
+.dx-datagrid-nowrap .dx-header-row > td > .dx-datagrid-text-content {
+    color: #5E707B;
+    border-bottom: 0px;
+    font-family: 'ProximaNova-Regular', 'Cairo-Regular';
+    font-weight: bold;
+    text-align: center !important;
+}
+
+.dx-datagrid .dx-column-lines > td {
+    border-left: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+}
+
+.dx-datagrid-content .dx-datagrid-table .dx-row > td, .dx-datagrid-content .dx-datagrid-table .dx-row > tr > td {
+    border: 0 !important;
+    text-align: center !important;
+    padding: 1rem 0.2rem !important;
+    border-bottom: 4px solid #ECF1F4 !important;
+    vertical-align: middle;
+}
+.dx-datagrid {
+    color: #6D8295 !important;
+}
+.dx-pager .dx-page-sizes .dx-selection, .dx-pager .dx-pages .dx-selection {
+    background-color: #4B88BC !important;
+    color: #ffffff !important;
+}

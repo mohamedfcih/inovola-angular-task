@@ -1,0 +1,66 @@
+﻿
+/*left side Modal*/
+
+.modal-dialog-slideout {
+    min-height: 100%;
+    margin: 0 0 0 auto;
+    background: rgba(29, 40, 68, 0.81);
+}
+
+.modal.fade .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(100%,0)scale(1);
+    transform: translate(100%,0)scale(1);
+}
+
+.modal.fade.show .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    display: flex;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    height: 100%;
+}
+
+    .modal.fade.show .modal-dialog.modal-dialog-slideout .modal-body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+.modal-dialog-slideout .modal-content {
+    border: 0;
+    border-radius: 0px;
+}
+
+.modal-dialog-slideout .modal-header {
+    display: block;
+}
+
+.modal-dialog-slideout .modal-footer {
+    display: block;
+}
+
+.modal-dialog-slideout .modal-header h5 {
+    float: left;
+}
+
+.border-tabs {
+    padding-bottom: 8px;
+}
+
+    .border-tabs li a.active {
+        color: #b68a35;
+        border-bottom: 3px solid #b68a35;
+    }
+
+    .border-tabs li a {
+        color: #384E64;
+        font-weight: bold;
+        padding: 0px 12px 8px 12px;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+body .left-side-modal {
+    padding-right: 0px !important;
+}
+/*end left side Modal*/
