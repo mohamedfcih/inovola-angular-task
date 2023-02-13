@@ -11,4 +11,4 @@
 # notes:
  - I have added a "logout()" function in the header to make you able to test Login and interceptor 
  - The project includes three modules "shared module", "user module" and "profile module" to make the best use of "lazy loading" methodology.
- - If you need to change the api link you can find it in the environment varibles.
+ - If you need to change the api link you can find it in the environment variables.
